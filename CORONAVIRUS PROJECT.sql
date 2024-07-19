@@ -10,14 +10,6 @@ CREATE TABLE coronavirus (
     Recovered INT
 );
 
-LOAD DATA INFILE 'G:/Corona Virus Dataset.csv'
-INTO TABLE coronavirus
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(Province, Country_Region, Latitude, Longitude, @Date, Confirmed, Deaths, Recovered)
-SET Date = STR_TO_DATE(@Date, '%d-%m-%Y');
 
 USE FINAL;
 
